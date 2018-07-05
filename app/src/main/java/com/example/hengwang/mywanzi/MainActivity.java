@@ -14,7 +14,7 @@ public class MainActivity extends Activity {
 //    TextView txtName = null;
 
     private static final String[] strs = new String[]{
-            "居中文字", "测试比重", "third", "fourth", "fifth"
+            "居中文字", "测试比重", "third", "fourth", "fifth","six"
     };
 
 
