@@ -14,7 +14,11 @@ public class MainActivity extends Activity {
 //    TextView txtName = null;
 
     private static final String[] strs = new String[]{
-            "居中文字", "测试比重", "third", "fourth", "fifth","six"
+            "居中文字", "测试比重", "改变背景"
+    };
+
+    private static final Class[] activities = new Class[]{
+            SecondActivity.class, TestLayoutActivity.class, ChangeBackgroundActivity.class
     };
 
 
@@ -34,14 +38,15 @@ public class MainActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //position 点击的Item位置，从0开始算
-                Intent intent = new Intent();
-                if (position == 0) {
-                    startActivity(new Intent(MainActivity.this, SecondActivity.class));
-                }
-                if (position == 1) {
-                    startActivity(new Intent(MainActivity.this, TestLayoutActivity.class));
-                }
-            }});
+                startActivity(new Intent(MainActivity.this, activities[position]));
+//                if (position == 0) {
+//                    startActivity(new Intent(MainActivity.this, SecondActivity.class));
+//                }
+//                if (position == 1) {
+//                    startActivity(new Intent(MainActivity.this, TestLayoutActivity.class));
+            }
+//        }
+        });
 
 
 
@@ -69,5 +74,7 @@ public class MainActivity extends Activity {
             }
         });*/
 
-        };
     }
+
+    ;
+}

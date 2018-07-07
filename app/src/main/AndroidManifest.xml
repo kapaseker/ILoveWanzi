@@ -21,6 +21,8 @@
         </activity>
         <activity android:name=".TestLayoutActivity">
         </activity>
+        <activity android:name=".ChangeBackgroundActivity">
+        </activity>
     </application>
 
 </manifest>
