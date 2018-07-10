@@ -11,6 +11,7 @@ public class ChangeBackgroundActivity extends AppCompatActivity {
     EditText mEdtInfo;
     View mBtnSetText;
     ToggleButton mTglEnable;
+    public boolean isEnable =true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +21,27 @@ public class ChangeBackgroundActivity extends AppCompatActivity {
         mEdtInfo = findViewById(R.id.input);
         mBtnSetText = findViewById(R.id.set_text);
         mTglEnable = findViewById(R.id.tgl_enable);
+
+        mBtnSetText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                    mEdtInfo.setText("i love wanzi");
+
+            }
+        });
+mTglEnable.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        if(isEnable){
+            isEnable=false;
+            mBtnSetText.setEnabled(false);
+        }else {
+            isEnable=true;
+            mBtnSetText.setEnabled(true);
+        }
+    }
+});
+
     }
 }

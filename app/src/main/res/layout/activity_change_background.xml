@@ -17,7 +17,8 @@
         android:id="@+id/set_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="设置文字"/>
+        android:text="设置文字"
+        android:background="@drawable/test_button_background2"/>
 
     <ToggleButton
         android:id="@+id/tgl_enable"
