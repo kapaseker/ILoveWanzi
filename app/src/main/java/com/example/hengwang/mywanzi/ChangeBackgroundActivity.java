@@ -2,6 +2,7 @@ package com.example.hengwang.mywanzi;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ToggleButton;
 
@@ -10,7 +11,7 @@ public class ChangeBackgroundActivity extends AssignmentActivity {
     EditText mEdtInfo;
     View mBtnSetText;
     ToggleButton mTglEnable;
-    public boolean isEnable = true;
+//   public boolean isEnable = true;
     String mText = "i love wanzi";
 
     @Override
@@ -31,16 +32,16 @@ public class ChangeBackgroundActivity extends AssignmentActivity {
 
             }
         });
-        mTglEnable.setOnClickListener(new View.OnClickListener() {
+        mTglEnable.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
-                if (isEnable) {
-                    isEnable = false;
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isEnable) {
+                if (!isEnable) {
+
                     mBtnSetText.setEnabled(false);
                     mEdtInfo.setText(null);
                     mEdtInfo.setEnabled(false);
                 } else {
-                    isEnable = true;
+
                     mBtnSetText.setEnabled(true);
                     mEdtInfo.setEnabled(true);
                 }
@@ -48,4 +49,7 @@ public class ChangeBackgroundActivity extends AssignmentActivity {
         });
 
     }
-}
+
+
+        }
+
