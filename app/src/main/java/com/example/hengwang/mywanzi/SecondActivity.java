@@ -1,10 +1,9 @@
 package com.example.hengwang.mywanzi;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 
-public class SecondActivity extends Activity {
+public class SecondActivity extends AssignmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

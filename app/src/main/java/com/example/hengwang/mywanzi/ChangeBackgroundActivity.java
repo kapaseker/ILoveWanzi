@@ -1,17 +1,16 @@
 package com.example.hengwang.mywanzi;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ToggleButton;
 
-public class ChangeBackgroundActivity extends AppCompatActivity {
+public class ChangeBackgroundActivity extends AssignmentActivity {
 
     EditText mEdtInfo;
     View mBtnSetText;
     ToggleButton mTglEnable;
-    public boolean isEnable =true;
+    public boolean isEnable = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,22 +25,22 @@ public class ChangeBackgroundActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                    mEdtInfo.setText("i love wanzi");
+                mEdtInfo.setText("i love wanzi");
 
             }
         });
-mTglEnable.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View view) {
-        if(isEnable){
-            isEnable=false;
-            mBtnSetText.setEnabled(false);
-        }else {
-            isEnable=true;
-            mBtnSetText.setEnabled(true);
-        }
-    }
-});
+        mTglEnable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (isEnable) {
+                    isEnable = false;
+                    mBtnSetText.setEnabled(false);
+                } else {
+                    isEnable = true;
+                    mBtnSetText.setEnabled(true);
+                }
+            }
+        });
 
     }
 }

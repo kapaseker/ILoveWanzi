@@ -1,80 +1,70 @@
 package com.example.hengwang.mywanzi;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
-//    String oldText = "";
-//    TextView txtName = null;
 
-    private static final String[] strs = new String[]{
+    private static final String[] TITLES = new String[]{
             "居中文字", "测试比重", "改变背景"
     };
 
-    private static final Class[] activities = new Class[]{
+    private static final Class[] ACTIVITIES = new Class[]{
             SecondActivity.class, TestLayoutActivity.class, ChangeBackgroundActivity.class
     };
 
 
-    //定义一个String数组用来显示ListView的内容
-    private ListView lv;
+    /**
+     * 定义一个String数组用来显示ListView的内容
+     */
+    private ListView mListAssignments;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        lv = (ListView) findViewById(R.id.lv);//得到ListView对象的引用
+        mListAssignments = findViewById(R.id.lv);//得到ListView对象的引用
         /*为ListView设置Adapter来绑定数据*/
-        lv.setAdapter(new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, strs));
+        mListAssignments.setAdapter(new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, TITLES));
 
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        mListAssignments.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //position 点击的Item位置，从0开始算
-                startActivity(new Intent(MainActivity.this, activities[position]));
-//                if (position == 0) {
-//                    startActivity(new Intent(MainActivity.this, SecondActivity.class));
-//                }
-//                if (position == 1) {
-//                    startActivity(new Intent(MainActivity.this, TestLayoutActivity.class));
+                letsGoAssignment(TITLES[position], ACTIVITIES[position]);
             }
-//        }
         });
-
-
-
-
-
-
-      /*  txtName = findViewById(R.id.name);
-        oldText = txtName.getText().toString();
-
-        findViewById(R.id.btnswitch).setOnClickListener(new View.OnClickListener() {
-
-
-            @Override
-            public void onClick(View view) {
-//                String currentTxt = txtName.getText().toString();
-//                if(oldText.equals(currentTxt)){
-//                    txtName.setText("hello kitty");
-//                }else {
-//                    txtName.setText(oldText);
-//                }
-
-//                startActivity(new Intent(MainActivity.this,SecondActivity.class));
-
-                startActivity(new Intent(MainActivity.this, TestLayoutActivity.class));
-            }
-        });*/
-
     }
 
-    ;
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.action_my_wish:
+                letsGoAssignment(item.getTitle(), WishActivity.class);
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void letsGoAssignment(CharSequence title, Class cls) {
+        Intent goIntent = new Intent(MainActivity.this, cls);
+        goIntent.putExtra(AssignmentActivity.BUNDLE_KEY_TITLE, title);
+        startActivity(goIntent);
+    }
 }
