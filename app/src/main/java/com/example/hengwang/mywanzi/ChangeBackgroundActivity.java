@@ -11,7 +11,7 @@ public class ChangeBackgroundActivity extends AssignmentActivity {
     EditText mEdtInfo;
     View mBtnSetText;
     ToggleButton mTglEnable;
-//   public boolean isEnable = true;
+    //   public boolean isEnable = true;
     String mText = "i love wanzi";
 
     @Override
@@ -35,15 +35,10 @@ public class ChangeBackgroundActivity extends AssignmentActivity {
         mTglEnable.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isEnable) {
+                mBtnSetText.setEnabled(isEnable);
+                mEdtInfo.setEnabled(isEnable);
                 if (!isEnable) {
-
-                    mBtnSetText.setEnabled(false);
                     mEdtInfo.setText(null);
-                    mEdtInfo.setEnabled(false);
-                } else {
-
-                    mBtnSetText.setEnabled(true);
-                    mEdtInfo.setEnabled(true);
                 }
             }
         });
@@ -51,5 +46,5 @@ public class ChangeBackgroundActivity extends AssignmentActivity {
     }
 
 
-        }
+}
 
