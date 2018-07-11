@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- 按钮按下背景图 -->
+    <item android:drawable="@color/colorPress" android:state_pressed="true"></item>
+    <!-- 按钮禁用背景图 -->
+    <item android:drawable="@color/colorDisEnable" android:state_enabled="false"></item>
+    <!-- 按钮正常背景图 -->
+    <item android:drawable="@color/colorDefault"></item>
+</selector>
