@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">My wanzi</string>
+    <string name="app_name">丸子作业</string>
 
-    <string name="bkg_test_desc">本次作业是这样的。\n
+    <string name="assignment_bkg">本次作业是这样的。\n
         点击设置文字按钮，输入框中设置一行文字，例如：我爱丸子。\n
         第二行的按钮，在按下，未按下，不许点击的时候，分别要设置成三种颜色：#0078D7,#0063B1,#69797E\n
         第三行是一个切换按钮。当开启时：按钮可以点击；关闭时：按钮不可点击。\n
@@ -9,6 +9,12 @@
         \n
         置灰状态时，输入框也不能输入\n
         当设置完文字的时候，光标要移动到末尾哦\n
+    </string>
+    <string name="assignment_tip">
+        我们这次学一下，android的几种提示方式：\n
+        第一个按钮，我们将弹出一个Toast。\n
+        第二个按钮，我们将弹出一个对话框，标题为：我爱丸子，内容为：丸子胖胖好可爱。下边有两个按钮，分别是我同意和我不同意，当点击我不同意时，退出当前Activity。\n
+        第三个按钮，我们将会弹出一个SnackBar显示。
     </string>
 
     <string name="my_wish">我的心愿</string>
