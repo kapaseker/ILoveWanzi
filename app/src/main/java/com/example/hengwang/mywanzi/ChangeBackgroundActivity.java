@@ -11,6 +11,7 @@ public class ChangeBackgroundActivity extends AssignmentActivity {
     View mBtnSetText;
     ToggleButton mTglEnable;
     public boolean isEnable = true;
+    String mText = "i love wanzi";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +26,8 @@ public class ChangeBackgroundActivity extends AssignmentActivity {
             @Override
             public void onClick(View view) {
 
-                mEdtInfo.setText("i love wanzi");
+                mEdtInfo.setText(mText);
+                mEdtInfo.setSelection(mText.length());//set cursor to the end
 
             }
         });
@@ -35,9 +37,12 @@ public class ChangeBackgroundActivity extends AssignmentActivity {
                 if (isEnable) {
                     isEnable = false;
                     mBtnSetText.setEnabled(false);
+                    mEdtInfo.setText(null);
+                    mEdtInfo.setEnabled(false);
                 } else {
                     isEnable = true;
                     mBtnSetText.setEnabled(true);
+                    mEdtInfo.setEnabled(true);
                 }
             }
         });
