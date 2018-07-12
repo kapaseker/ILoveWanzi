@@ -29,9 +29,32 @@
         android:layout_toRightOf="@id/btn_dialog"
         android:text="展示Snackbar"/>
 
+    <Button
+        android:id="@+id/btn_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_toast"
+        android:text="展示日期选择"/>
+
+    <Button
+        android:id="@+id/btn_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_toast"
+        android:layout_toRightOf="@id/btn_date"
+        android:text="展示时间选择"/>
+
+    <Button
+        android:id="@+id/btn_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_toast"
+        android:layout_toRightOf="@id/btn_time"
+        android:text="展示等待加载框"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn_toast"
+        android:layout_below="@id/btn_loading"
         android:text="@string/assignment_tip"/>
 </RelativeLayout>

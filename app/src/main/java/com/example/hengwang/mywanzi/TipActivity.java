@@ -1,6 +1,5 @@
 package com.example.hengwang.mywanzi;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -8,7 +7,7 @@ import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.widget.Toast;
 
-public class TipActivity extends Activity {
+public class TipActivity extends AssignmentActivity {
     View mBtnToast;
     View mBtnDialog;
     View mBtnSnackbar;
