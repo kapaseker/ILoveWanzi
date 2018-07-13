@@ -21,6 +21,14 @@
         第六个按钮，我们展示一个等待框，就是一直在转的，有一个按钮，就是取消。\n
     </string>
 
+     <string name="assignment_grid">
+         我们这次学一下，适合使用GridView：\n
+         图标，我已经给你放进去了，R.drawable.icon_house；\n
+         此次GridView，我们每行显示4个，显示6行，每行有一个图标和文字，图标就用上面那个，文字我们显示为NO.X，X代表第几个。\n
+         当点击GridView的第几个的时候，我们使用Toast弹出“第X个被点击了”的样式。\n
+         GridView放在这段文字下边。\n
+    </string>
+
     <string name="my_wish">我的心愿</string>
 
     <string name="content_wish">

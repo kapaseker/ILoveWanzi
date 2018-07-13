@@ -14,11 +14,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     private static final String[] TITLES = new String[]{
-            "居中文字", "测试比重", "改变背景", "发起提示"
+            "居中文字", "测试比重", "改变背景", "发起提示", "展示网格列表"
     };
 
     private static final Class[] ACTIVITIES = new Class[]{
-            SecondActivity.class, TestLayoutActivity.class, ChangeBackgroundActivity.class, TipActivity.class
+            SecondActivity.class, TestLayoutActivity.class, ChangeBackgroundActivity.class, TipActivity.class, GridViewActivity.class
     };
 
 
