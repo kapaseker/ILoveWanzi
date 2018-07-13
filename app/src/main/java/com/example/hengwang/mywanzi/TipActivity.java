@@ -41,46 +41,52 @@ public class TipActivity extends AssignmentActivity {
 
 
     private void showWaitingDialog() {
-    /* 等待Dialog具有屏蔽其他控件的交互能力
-     * @setCancelable 为使屏幕不可点击，设置为不可取消(false)
-     * 下载等事件完成后，主动调用函数关闭该Dialog
-     */
-    ProgressDialog waitingDialog=
-        new ProgressDialog(TipActivity.this);
-    waitingDialog.setTitle("我是一个等待Dialog");
-    waitingDialog.setMessage("等待中...");
-    waitingDialog.setIndeterminate(true);
-    waitingDialog.setCancelable(true);
-    waitingDialog.show();
-}
+        /* 等待Dialog具有屏蔽其他控件的交互能力
+         * @setCancelable 为使屏幕不可点击，设置为不可取消(false)
+         * 下载等事件完成后，主动调用函数关闭该Dialog
+         */
+        ProgressDialog waitingDialog =
+                new ProgressDialog(TipActivity.this);
+        waitingDialog.setTitle("我是一个等待Dialog");
+        waitingDialog.setMessage("等待中...");
+        waitingDialog.setIndeterminate(true);
+        waitingDialog.setCancelable(true);
+        waitingDialog.setButton(DialogInterface.BUTTON_NEGATIVE, "取消"
+                , new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface d, int i) {
+                        d.cancel();
+                    }
+                });
+        waitingDialog.show();
+    }
 
 
+    private void showCustomizeDialog() {
+        /* @setView 装入自定义View ==> R.layout.dialog_customize
+         * 由于dialog_customize.xml只放置了一个EditView，因此和图8一样
+         * dialog_customize.xml可自定义更复杂的View
+         */
+        AlertDialog.Builder customizeDialog =
+                new AlertDialog.Builder(TipActivity.this);
+        final View dialogView = LayoutInflater.from(TipActivity.this)
+                .inflate(R.layout.dialog_customize, null);
+        customizeDialog.setTitle("我是一个自定义Dialog");
+        customizeDialog.setView(dialogView);
+        customizeDialog.setPositiveButton("确定",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // 获取EditView中的输入内容
+                        EditText edit_text =
+                                (EditText) dialogView.findViewById(R.id.edit_text);
+                        Toast.makeText(TipActivity.this,
+                                edit_text.getText().toString(),
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+        customizeDialog.show();
+    }
 
-private void showCustomizeDialog() {
-    /* @setView 装入自定义View ==> R.layout.dialog_customize
-     * 由于dialog_customize.xml只放置了一个EditView，因此和图8一样
-     * dialog_customize.xml可自定义更复杂的View
-     */
-    AlertDialog.Builder customizeDialog =
-        new AlertDialog.Builder(TipActivity.this);
-    final View dialogView = LayoutInflater.from(TipActivity.this)
-        .inflate(R.layout.dialog_customize,null);
-    customizeDialog.setTitle("我是一个自定义Dialog");
-    customizeDialog.setView(dialogView);
-    customizeDialog.setPositiveButton("确定",
-        new DialogInterface.OnClickListener() {
-        @Override
-        public void onClick(DialogInterface dialog, int which) {
-            // 获取EditView中的输入内容
-            EditText edit_text =
-                (EditText) dialogView.findViewById(R.id.edit_text);
-            Toast.makeText(TipActivity.this,
-                edit_text.getText().toString(),
-                Toast.LENGTH_SHORT).show();
-        }
-    });
-    customizeDialog.show();
-}
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -126,11 +132,15 @@ private void showCustomizeDialog() {
                 DatePickerDialog datePickerDialog = new DatePickerDialog(TipActivity.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        String nyear = String.valueOf(year);
+                        String nmonth = String.valueOf(month + 1);
+                        String ndayOfMonth = String.valueOf(dayOfMonth);
 
-                       Snackbar.make(view, year+month+dayOfMonth, Snackbar.LENGTH_SHORT).show();
+                        Snackbar.make(mBtndate, nyear + nmonth + ndayOfMonth, Snackbar.LENGTH_SHORT).show();
 
 
-                }}, mYear, mMonth, mDay);
+                    }
+                }, mYear, mMonth, mDay);
                 datePickerDialog.show();
 
 
@@ -140,16 +150,19 @@ private void showCustomizeDialog() {
         mBtnTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                      TimePickerDialog timeDialog = new TimePickerDialog(TipActivity.this, new TimePickerDialog.OnTimeSetListener() {
-                            @Override
-                            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                TimePickerDialog timeDialog = new TimePickerDialog(TipActivity.this, new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                        String nhourOfDay = String.valueOf(hourOfDay);
+                        String nminute = String.valueOf(minute);
 
-                                Snackbar.make(view, hourOfDay+minute, Snackbar.LENGTH_SHORT).show();
-                            }
-                        }, 0, 0, false);
-                        timeDialog.show();
 
- }
+                        Snackbar.make(mBtnTime, nhourOfDay + nminute, Snackbar.LENGTH_SHORT).show();
+                    }
+                }, 0, 0, true);
+                timeDialog.show();
+
+            }
 
         });
 
