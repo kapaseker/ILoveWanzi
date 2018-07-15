@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_default">12dp</dimen>
+    <dimen name="size_love">280dp</dimen>
+
+    <dimen name="txt_big">16sp</dimen>
+    <dimen name="txt_superbig">20sp</dimen>
+</resources>

@@ -27,6 +27,9 @@
         <activity android:name=".TipActivity">
         </activity>
         <activity android:name=".GridViewActivity"/>
+        <activity android:name=".WhatDrawActivity">
+        </activity>
+        <activity android:name=".ILoveActivity"/>
     </application>
 
 </manifest>

@@ -4,21 +4,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class WishActivity extends AssignmentActivity implements View.OnClickListener {
+public class WhatDrawActivity extends AssignmentActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_wish);
+        setContentView(R.layout.activity_what_draw);
 
-        findViewById(R.id.btn_clickme).setOnClickListener(this);
+        findViewById(R.id.btn_guess).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btn_clickme:
-                startActivity(new Intent(this, WhatDrawActivity.class));
+            case R.id.btn_guess:
+                startActivity(new Intent(this, ILoveActivity.class));
+                finish();
                 break;
         }
     }
