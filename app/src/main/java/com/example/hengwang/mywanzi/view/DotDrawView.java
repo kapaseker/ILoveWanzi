@@ -34,20 +34,14 @@ public class DotDrawView extends BaseLoveFrameView {
     }
 
     @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-    }
-
-    @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        startAnimation();
 
         float[] pos = new float[2];
         mPathMeasure.getPosTan(getValue(), pos, null);
 
         mPaint.setStyle(Paint.Style.FILL);
-        mPaint.setColor(GRADUAL_COLOR[0]);
+        mPaint.setColor(GRADUAL_COLOR[getCurrentRepeatTimes() % GRADUAL_COLOR.length]);
         canvas.drawCircle(pos[0], pos[1], mDotRadius, mPaint);
     }
 }

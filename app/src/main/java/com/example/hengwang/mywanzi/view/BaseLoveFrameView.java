@@ -17,9 +17,9 @@ import android.view.animation.LinearInterpolator;
 public abstract class BaseLoveFrameView extends View implements ValueAnimator.AnimatorUpdateListener {
 
     //    protected static final int MAX_VAL_COUNT = 1000;
-    protected static final int TIME_INTERVAL = 6000;
+    protected static final int TIME_INTERVAL = 4800;
     protected static final int SUBSECTION = 4;
-    protected static final int mDotRadius = 6;
+    protected static final int mDotRadius = 8;
 
     PathMeasure mPathMeasure = null;
 
@@ -39,17 +39,19 @@ public abstract class BaseLoveFrameView extends View implements ValueAnimator.An
     protected Paint mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
     protected static final int[] GRADUAL_COLOR = new int[]{
-            Color.parseColor("#F48FB1"),
-            Color.parseColor("#F06292"),
-            Color.parseColor("#EC407A"),
-            Color.parseColor("#E91E63"),
+            Color.parseColor("#1976D2"),
+            Color.parseColor("#5E35B1"),
+            Color.parseColor("#ef5350"),
             Color.parseColor("#D81B60"),
-            Color.parseColor("#C2185B"),
-            Color.parseColor("#AD1457"),
+            Color.parseColor("#F57F17"),
+            Color.parseColor("#FF5722"),
+            Color.parseColor("#6A1B9A"),
     };
 
-    private ValueAnimator mLoveAnimation = null;
+    private ValueAnimator mLoveAnimation = ValueAnimator.ofFloat(0, 1);
+
     private float mValue = 0;
+    private int mRepeatIndex = 0;
 
 
     public BaseLoveFrameView(Context context) {
@@ -91,6 +93,8 @@ public abstract class BaseLoveFrameView extends View implements ValueAnimator.An
         mBottom = (int) (3.2 * mTopCirclrRadius);
 
         makePath();
+
+        startAnimation();
     }
 
     private void makePath() {
@@ -108,12 +112,12 @@ public abstract class BaseLoveFrameView extends View implements ValueAnimator.An
 
         mPathMeasure = new PathMeasure(mDrawPath, false);
 
-        mLoveAnimation = ValueAnimator.ofFloat(0, mPathMeasure.getLength());
-
+        mLoveAnimation.setFloatValues(0, mPathMeasure.getLength());
     }
 
     public void startAnimation() {
-        if (!mLoveAnimation.isRunning()) {
+        if (!mLoveAnimation.isStarted()) {
+            clearAnimation();
             mLoveAnimation.setDuration(TIME_INTERVAL);
             mLoveAnimation.setRepeatCount(ValueAnimator.INFINITE);
             mLoveAnimation.setRepeatMode(ValueAnimator.RESTART);
@@ -131,9 +135,18 @@ public abstract class BaseLoveFrameView extends View implements ValueAnimator.An
         return mValue;
     }
 
+    public int getCurrentRepeatTimes() {
+        return mRepeatIndex;
+    }
+
     @Override
     public void onAnimationUpdate(ValueAnimator animation) {
         float val = (float) animation.getAnimatedValue();
+
+        if (mValue > val) {
+            ++mRepeatIndex;
+        }
+
         mValue = val;
         onValueUpdated(val);
     }

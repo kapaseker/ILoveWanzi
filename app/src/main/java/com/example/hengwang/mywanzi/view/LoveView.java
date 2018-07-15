@@ -28,15 +28,10 @@ public class LoveView extends DotDrawView {
     }
 
     @Override
-    protected void onValueUpdated(float value) {
-        invalidate();
-    }
-
-    @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        mPaint.setColor(GRADUAL_COLOR[3]);
+//        mPaint.setColor(GRADUAL_COLOR[getCurrentRepeatTimes() % GRADUAL_COLOR.length]);
         mPaint.setStrokeWidth(mDotRadius / 2);
         mPaint.setStyle(Paint.Style.STROKE);
 
