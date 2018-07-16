@@ -82,14 +82,14 @@ public abstract class BaseLoveFrameView extends View implements ValueAnimator.An
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         mWidth = getMeasuredWidth();
         mHeight = getMeasuredHeight();
-        mTopCirclrRadius = mWidth / SUBSECTION - mDotRadius / 2;
+        mTopCirclrRadius = mWidth / SUBSECTION - mDotRadius;
         mCentX = mWidth / 2;
         mCentY = mHeight / 2;
 
         mLeftPos = mCentX - 2 * mTopCirclrRadius;
         mRightPos = mCentX + 2 * mTopCirclrRadius;
 
-        mTop = mDotRadius / 2;
+        mTop = mDotRadius;
         mBottom = (int) (3.2 * mTopCirclrRadius);
 
         makePath();
