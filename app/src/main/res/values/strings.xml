@@ -22,11 +22,18 @@
     </string>
 
     <string name="assignment_grid">
-         我们这次学一下，适合使用GridView：\n
+         我们这次学一下，如何使用GridView：\n
          图标，我已经给你放进去了，R.drawable.icon_house；\n
          此次GridView，我们每行显示4个，显示6行，每行有一个图标和文字，图标就用上面那个，文字我们显示为NO.X，X代表第几个。\n
          当点击GridView的第几个的时候，我们使用Toast弹出“第X个被点击了”的样式。\n
          GridView放在这段文字下边。\n
+    </string>
+
+    <string name="assignment_viewpager">
+         我们这次学一下，如何使用ViewPager：\n
+         图片背景资源，我已经给你放进去了，分别是四张图片R.drawable.bkg_bird，R.drawable.bkg_cry，R.drawable.bkg_double，R.drawable.bkg_house；\n
+         注意图片的显示，我要这个屏幕平铺，意思就是没有空隙，显示到整个布局上面；\n
+         同样，我们的ViewPager，总共有四页，每一页背景为一行图片，同时屏幕居中显示蓝色的文字“第X页”；\n
     </string>
 
     <string name="my_wish">我的心愿</string>
@@ -40,4 +47,6 @@
     <string name="click_me">点我呀\u2192</string>
     <string name="do_you_know_draw">猜猜那个小点在画什么？\u2192</string>
     <string name="content_love">滴不尽相思血泪抛红豆\n开不完春柳春花满画楼</string>
+
+    <string name="commit_assignment">交作业</string>
 </resources>

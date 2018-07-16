@@ -30,6 +30,10 @@
         <activity android:name=".WhatDrawActivity">
         </activity>
         <activity android:name=".ILoveActivity"/>
+        <activity android:name=".ArrangeAssignmentActivity">
+        </activity>
+        <activity android:name=".ViewPagerAssignmentActivity">
+        </activity>
     </application>
 
 </manifest>
