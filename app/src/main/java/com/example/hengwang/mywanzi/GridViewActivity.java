@@ -25,7 +25,7 @@ public class GridViewActivity extends AssignmentActivity {
         for (int i = 0; i < 24; i++) {
             HashMap<String, Object> map = new HashMap<String, Object>();
             map.put("ItemImage", R.drawable.icon_house);//添加图像资源的ID
-            map.put("ItemText", "NO." + String.valueOf(i));//按序号做ItemText
+            map.put("ItemText", "NO." + String.valueOf(i+1));//按序号做ItemText
             lstImageItem.add(map);
         }
         //生成适配器的ImageItem <====> 动态数组的元素，两者一一对应
@@ -55,7 +55,7 @@ public class GridViewActivity extends AssignmentActivity {
             HashMap<String, Object> item = (HashMap<String, Object>) arg0.getItemAtPosition(arg2);
             //显示所选Item的ItemText
             setTitle((String) item.get("ItemText"));
-            Toast.makeText(GridViewActivity.this, item.get("ItemText").toString(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(GridViewActivity.this, item.get("ItemText").toString()+"个样式被点击了", Toast.LENGTH_SHORT).show();
         }
     }
 }
