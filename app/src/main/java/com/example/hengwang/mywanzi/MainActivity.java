@@ -15,17 +15,18 @@ public class MainActivity extends AppCompatActivity {
 
 
     private static final String[] TITLES = new String[]{
-            "居中文字", "测试比重", "改变背景", "发起提示", "展示网格列表", "使用ViewPager"
+            "居中文字", "测试比重", "改变背景", "发起提示", "展示网格列表", "使用ViewPager","Activity传值"
     };
 
     private static final int[] DESCS = new int[]{
             R.string.app_name, R.string.app_name, R.string.assignment_bkg, R.string.assignment_tip, R.string.assignment_grid,
-            R.string.assignment_viewpager
+            R.string.assignment_viewpager,
+            R.string.assignment_transfer
     };
 
     private static final Class[] ACTIVITIES = new Class[]{
             SecondActivity.class, TestLayoutActivity.class, ChangeBackgroundActivity.class, TipActivity.class, GridViewActivity.class,
-            ViewPagerAssignmentActivity.class
+            ViewPagerAssignmentActivity.class,TransferAssignmentActivity.class
     };
 
 

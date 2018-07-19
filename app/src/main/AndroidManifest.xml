@@ -12,7 +12,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN">
                 </action>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
@@ -30,9 +29,9 @@
         <activity android:name=".WhatDrawActivity">
         </activity>
         <activity android:name=".ILoveActivity"/>
-        <activity android:name=".ArrangeAssignmentActivity">
-        </activity>
         <activity android:name=".ViewPagerAssignmentActivity">
+        </activity>
+        <activity android:name=".TransferAssignmentActivity">
         </activity>
     </application>
 

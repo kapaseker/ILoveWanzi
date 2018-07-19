@@ -33,7 +33,17 @@
          我们这次学一下，如何使用ViewPager：\n
          图片背景资源，我已经给你放进去了，分别是四张图片R.drawable.bkg_bird，R.drawable.bkg_cry，R.drawable.bkg_double，R.drawable.bkg_house；\n
          注意图片的显示，我要这个屏幕平铺，意思就是没有空隙，显示到整个布局上面；\n
-         同样，我们的ViewPager，总共有四页，每一页背景为一行图片，同时屏幕居中显示蓝色的文字“第X页”；\n
+         同样，我们的ViewPager，总共有四页，每一页背景为一张图片，同时屏幕居中显示蓝色的文字“第X页”；\n
+    </string>
+
+    <string name="assignment_transfer">
+        我们这次学一下，如何在两个Activity之间传值：\n
+        自己需要写两个Activity哦；\n
+        第一个Activity，分别是竖向排列一个TextView，一个Button，Button文字为“获取内容”，点击Button的时候，跳转到第二个Activity；\n
+        第二个Activity，竖向排列一个输入框，一个Button，Button文字为“返回”，当点击返回时，检查输入框文字内容：\n
+        1、如果没有内容，则弹出SnackBar提示“请输入文字”。\n
+        2、如果有内容，则将输入框的内容传递并返回到第一个Activity。\n
+        第一个Activity接收到第二个Activity的返回内容，将该内容输出到TextView上。
     </string>
 
     <string name="my_wish">我的心愿</string>
