@@ -12,6 +12,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN">
                 </action>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
@@ -32,6 +33,10 @@
         <activity android:name=".ViewPagerAssignmentActivity">
         </activity>
         <activity android:name=".TransferAssignmentActivity">
+        </activity>
+        <activity android:name=".ListViewActivity">
+        </activity>
+        <activity android:name=".ViewPagerActivity">
         </activity>
     </application>
 
