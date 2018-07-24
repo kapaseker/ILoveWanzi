@@ -42,6 +42,8 @@
         </activity>
         <activity android:name=".AnswerActivity">
         </activity>
+        <activity android:name=".OpenContractAssignmentActivity">
+        </activity>
     </application>
 
 </manifest>

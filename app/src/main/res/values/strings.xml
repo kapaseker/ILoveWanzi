@@ -46,6 +46,13 @@
         第一个Activity接收到第二个Activity的返回内容，将该内容输出到TextView上。
     </string>
 
+    <string name="assignment_open_contract">
+        我们这次学一下，如何获取android的联系人：\n
+        自己写一个Activity，竖向排列一个TextView，一个Button，Button文字为“选取联系人”，点击Button的时候，跳转到系统的联系人界面；\n
+        在系统联系人界面完成了选取之后，回到自己的Activity，这个时候，我们要在TextView上显示联系人的名称和电话号码。\n
+        另外，鉴于每次表现这么好，今后的教程和资料查询，我不再给了，要自己动手了哦。\n
+    </string>
+
     <string name="my_wish">我的心愿</string>
 
     <string name="content_wish">
