@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private static final String[] TITLES = new String[]{
-            "居中文字", "测试比重", "改变背景", "发起提示", "展示网格列表", "使用ViewPager", "Activity传值", "展示ListView", "打开联系人"
+            "居中文字", "测试比重", "改变背景", "发起提示", "展示网格列表", "使用ViewPager", "Activity传值", "展示ListView", "打开联系人", "本地存储"
     };
 
     private static final int[] DESCS = new int[]{
@@ -24,12 +24,14 @@ public class MainActivity extends AppCompatActivity {
             R.string.assignment_transfer,
             R.string.app_name,
             R.string.assignment_open_contract,
+            R.string.assignment_local_save,
 
     };
 
     private static final Class[] ACTIVITIES = new Class[]{
             SecondActivity.class, TestLayoutActivity.class, ChangeBackgroundActivity.class, TipActivity.class, GridViewActivity.class,
-            ViewPagerAssignmentActivity.class, TransferAssignmentActivity.class, ListViewActivity.class, OpenContractAssignmentActivity.class
+            ViewPagerAssignmentActivity.class, TransferAssignmentActivity.class, ListViewActivity.class, OpenContractAssignmentActivity.class,
+            LocalSaveActivity.class
     };
 
 

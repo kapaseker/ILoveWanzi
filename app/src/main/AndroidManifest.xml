@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest package="com.example.hengwang.mywanzi"
           xmlns:android="http://schemas.android.com/apk/res/android">
-          <uses-permission android:name="android.permission.READ_CONTACTS"/>
-        <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
 
     <application
         android:allowBackup="true"
@@ -48,9 +49,8 @@
         </activity>
         <activity android:name=".contactActivity">
         </activity>
-
-
-
+        <activity android:name=".LocalSaveActivity">
+        </activity>
     </application>
 
 </manifest>

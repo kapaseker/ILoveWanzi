@@ -53,6 +53,16 @@
         另外，鉴于每次表现这么好，今后的教程和资料查询，我不再给了，要自己动手了哦。\n
     </string>
 
+    <string name="assignment_local_save">
+        本次学习内容，我们学习如何使用本地存储：\n
+        Android的本地存储方式有很多种，包括数据库，sharedpreference，内置存储，外置存储的等方式；\n
+        那么，这次作业我们先学习如何使用sharedpreference以及读写文件；\n
+        自己写一个Activity，分别竖向排列7个控件，第一行是TextView，后面6个是6个按钮，分别为：\n
+        存入Preference，从Preference读取，存入内置存储，从内置存储读取，存入外部存储，从外部存储读取；\n
+        在点击这六个按钮的时候，分别要对sharedpreference，内部存储，外部存储进行读写操作。\n
+        写入内容可以随便写，但是三种存储类型的内容要不一样，读取的结果，展示在TextView上面。\n
+    </string>
+
     <string name="my_wish">我的心愿</string>
 
     <string name="content_wish">
