@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context=".SharedPreferencesActivity">
+<EditText
+    android:id="@+id/mInfo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+
+     <Button
+        android:id="@+id/btn_writeSP"
+        android:text="写入sharedperferrences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+     <Button
+        android:id="@+id/btn_readSP"
+        android:text="读取sharedperferrences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+     <Button
+        android:id="@+id/btn_writeinter"
+        android:text="写入内部存储"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+     <Button
+        android:id="@+id/btn_readinter"
+        android:text="读取内部存储"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+     <Button
+        android:id="@+id/btn_writeOuter"
+        android:text="写入外部存储"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+     <Button
+        android:id="@+id/btn_readOuter"
+        android:text="读取外部存储"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

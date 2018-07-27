@@ -51,6 +51,8 @@
         </activity>
         <activity android:name=".LocalSaveActivity">
         </activity>
+        <activity android:name=".SharedPreferencesActivity">
+        </activity>
     </application>
 
 </manifest>
