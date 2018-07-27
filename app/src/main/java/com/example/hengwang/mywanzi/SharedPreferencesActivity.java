@@ -155,7 +155,7 @@ public class SharedPreferencesActivity extends AssignmentActivity implements Vie
             FileOutputStream fos = null;
             if (!str.isEmpty()) {
                 try {
-                    fos = openFileOutput(NAME_SAVEEXTEERNALFILE, Context.MODE_PRIVATE);
+                    fos = new FileOutputStream(file);
                     fos.write(str.getBytes());
                     fos.close();
                 } catch (FileNotFoundException e) {
@@ -180,10 +180,11 @@ public class SharedPreferencesActivity extends AssignmentActivity implements Vie
     private void readExternalfile() {
         if (isSDCardMounted()) {
             File dir = Environment.getExternalStorageDirectory();
+            File file = new File(dir, NAME_SAVEEXTEERNALFILE);
 
             FileInputStream ios = null;
             try {
-                ios = openFileInput(NAME_SAVEEXTEERNALFILE);
+                ios = new FileInputStream(file);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
