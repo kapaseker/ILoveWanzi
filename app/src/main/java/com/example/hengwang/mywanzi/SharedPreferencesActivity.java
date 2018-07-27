@@ -127,7 +127,7 @@ public class SharedPreferencesActivity extends AssignmentActivity {
                         content = br.readLine();
 
                     }
-                    mEditView.setText(br.toString());
+                    mEditView.setText(sb.toString());
 
 
                 } catch (IOException e) {
