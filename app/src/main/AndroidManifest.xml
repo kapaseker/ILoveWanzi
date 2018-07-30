@@ -55,6 +55,8 @@
         </activity>
         <activity android:name=".SharedPreferencesActivity">
         </activity>
+        <activity android:name=".SqlAssignmentActivity"/>
+        <activity android:name=".LogAndLifeAssignmentActivity"/>
     </application>
 
 </manifest>

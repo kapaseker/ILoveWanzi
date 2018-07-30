@@ -3,6 +3,7 @@ package com.example.hengwang.mywanzi;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -33,6 +34,38 @@ public class QuestionActivity extends AssignmentActivity {
 
             }
         });
+
+        Log.i("Life","Question - onCreate");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.i("Life","Question - onStart");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.i("Life","Question - onStop");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i("Life","Question - onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i("Life","Question - onPause");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i("Life","Question - onDestroy");
     }
 
     @Override

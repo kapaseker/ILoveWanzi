@@ -63,6 +63,23 @@
         写入内容可以随便写，但是三种存储类型的内容要不一样，读取的结果，展示在TextView上面。\n
     </string>
 
+    <string name="assignment_lifecircle">
+        本次学习内容，特别特别简单，但是对android来讲，特别特别重要：\n
+        包含两方面：1，Activity的生命周期；2，使用Android的Logcat：\n
+        Activity的生命周期函数，一共有6个。\n
+        我们建立两个Activity，每个Activity都需要在6个生命周期函数中通过Logcat将生命周期函数打印出来，同时，我们要注意查看，当一个Activity启动另一个Activity的时候，生命周期的调用顺序是怎样的顺序。
+    </string>
+
+    <string name="assignment_sql">
+        本次学习内容，是针对Android的另外一种本地存储----SQLite的学习：\n
+        我们建立一个Activity，在Activity创建的时候，创建数据库。\n
+        数据库中含有一个表，表中的见分别有ID（long类型，主键），name（Text类型），height（浮点数类型），introduce（TextL类型）。\n
+        Activity有一个TextView，两个按钮是插入和查询。\n
+        点击插入时，插入一条数据，name，height，introduce可以随便生成，也可以写死，都可以。\n
+        点击查询的时候，要将最近插入的一条数据，输出到TextView上，ID，name，height，introduce都需要展示哦。\n
+        温馨提示：这个数据库可是相当有难度的，比外部存储都难好多。
+    </string>
+
     <string name="my_wish">我的心愿</string>
 
     <string name="content_wish">

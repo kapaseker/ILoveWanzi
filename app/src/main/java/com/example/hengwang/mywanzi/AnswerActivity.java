@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -39,5 +40,37 @@ public class AnswerActivity extends AssignmentActivity {
         });
 
         mEdtContent.setText(getIntent().getStringExtra(BUNDLE_KEY_CONTENT));
+
+        Log.i("Life","Answer - onCreate");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.i("Life","Answer - onStart");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.i("Life","Answer - onStop");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i("Life","Answer - onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i("Life","Answer - onPause");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i("Life","Answer - onDestroy");
     }
 }
