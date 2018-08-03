@@ -33,7 +33,7 @@ public class SqlActivity extends AssignmentActivity {
         mBtninsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String str=dbHelper.insert("xiaoming",(float) 1.75,"gaofushuai");
+                String str = dbHelper.insert("xiaoming", (float) 1.75, "gaofushuai");
                 Toast.makeText(SqlActivity.this, "Insert succeeded", Toast.LENGTH_SHORT).show();
 
                 mTextView.setText(str);
@@ -44,15 +44,15 @@ public class SqlActivity extends AssignmentActivity {
             @Override
             public void onClick(View view) {
 
-                Cursor cursor=dbHelper.query("all");
+                Cursor cursor = dbHelper.query("all");
                 cursor.moveToLast();
                 String name = cursor.getString(cursor.getColumnIndex("name"));
                 float nheight;
-               String height =  cursor.getString(cursor.getColumnIndex("height"));
-               nheight =Float.parseFloat(height);
+                String height = cursor.getString(cursor.getColumnIndex("height"));
+                nheight = Float.parseFloat(height);
                 String introduce = cursor.getString(cursor.getColumnIndex("introduce"));
-                String str="name:"+name+"; height:"+nheight+"; introduce:"+introduce;
-                 mTextView.setText(str);
+                String str = "name:" + name + "; height:" + nheight + "; introduce:" + introduce;
+                mTextView.setText(str);
 
 
             }
@@ -110,14 +110,14 @@ public class SqlActivity extends AssignmentActivity {
         public String insert(String Name, float height, String introduce) {
             SQLiteDatabase db = this.getWritableDatabase();
             ContentValues cv = new ContentValues();
-            String str=null;
+            String str = null;
 
             Name = Name + getTime();
-            introduce=introduce+getTime();
+            introduce = introduce + getTime();
             cv.put("name", Name);
             cv.put("height", height);
             cv.put("introduce", introduce);
-            str="name:"+Name+"; height:"+height+"; introduce:"+introduce;
+            str = "name:" + Name + "; height:" + height + "; introduce:" + introduce;
             long row = db.insert(TABLE_NAME, null, cv);
             return str;
         }
@@ -125,7 +125,7 @@ public class SqlActivity extends AssignmentActivity {
         //根据条件查询
         public Cursor query(String args) {
             SQLiteDatabase db = this.getReadableDatabase();
-            Cursor cursor = db.query(TABLE_NAME,null,null,null,null,null,null);
+            Cursor cursor = db.query(TABLE_NAME, null, null, null, null, null, null);
             return cursor;
         }
 
