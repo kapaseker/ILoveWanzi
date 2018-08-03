@@ -44,6 +44,14 @@ public class SqlActivity extends AssignmentActivity {
             @Override
             public void onClick(View view) {
 
+                Cursor cursor=dbHelper.query("all");
+                cursor.moveToLast();
+                String name = cursor.getString(cursor.getColumnIndex("Name"));
+                String height = cursor.getString(cursor.getColumnIndex("height"));
+                String introduce = cursor.getString(cursor.getColumnIndex("introduce"));
+                String str="name:"+name+"; height:"+height+"; introduce:"+introduce;
+                 mTextView.setText(str);
+
 
             }
         });
@@ -113,9 +121,9 @@ public class SqlActivity extends AssignmentActivity {
         }
 
         //根据条件查询
-        public Cursor query(String[] args) {
+        public Cursor query(String args) {
             SQLiteDatabase db = this.getReadableDatabase();
-            Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE BookName LIKE ?", args);
+            Cursor cursor = db.query(TABLE_NAME,null,null,null,null,null,null);
             return cursor;
         }
 
