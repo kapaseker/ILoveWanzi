@@ -57,6 +57,12 @@
         </activity>
         <activity android:name=".SqlAssignmentActivity"/>
         <activity android:name=".LogAndLifeAssignmentActivity"/>
+        <activity android:name=".ActivityLife1Activity">
+        </activity>
+        <activity android:name=".ActivityLife2Activity">
+        </activity>
+        <activity android:name=".SqlActivity">
+        </activity>
     </application>
 
 </manifest>
