@@ -53,7 +53,7 @@ public class SqlActivity extends AssignmentActivity {
                 String introduce = cursor.getString(cursor.getColumnIndex("introduce"));
                 String str = "name:" + name + "; height:" + nheight + "; introduce:" + introduce;
                 mTextView.setText(str);
-
+                cursor.close();
 
             }
         });
