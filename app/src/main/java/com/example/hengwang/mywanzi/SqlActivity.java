@@ -47,11 +47,9 @@ public class SqlActivity extends AssignmentActivity {
                 Cursor cursor = dbHelper.query("all");
                 cursor.moveToLast();
                 String name = cursor.getString(cursor.getColumnIndex("name"));
-                float nheight;
-                String height = cursor.getString(cursor.getColumnIndex("height"));
-                nheight = Float.parseFloat(height);
+                Float height = cursor.getFloat(cursor.getColumnIndex("height"));
                 String introduce = cursor.getString(cursor.getColumnIndex("introduce"));
-                String str = "name:" + name + "; height:" + nheight + "; introduce:" + introduce;
+                String str = "name:" + name + "; height:" + height + "; introduce:" + introduce;
                 mTextView.setText(str);
                 cursor.close();
 
