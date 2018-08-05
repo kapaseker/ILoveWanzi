@@ -45,6 +45,12 @@
         2、如果有内容，则将输入框的内容传递并返回到第一个Activity。\n
         第一个Activity接收到第二个Activity的返回内容，将该内容输出到TextView上。
     </string>
+    <string name="assignment_fragment">
+        这次的作业特别简单，就是怎么使用Fragment：\n
+        首先，一个Activity，当进入的时候，有一个展示的fragment，这个fragment有一个按钮，点击之后，切换到第二个fragment。\n
+        第二个fragment也有一个按钮，点击回退到第一个。\n
+        不过在此基础上，我们必须知道所有的Fragment的生命周期，同理，需要打Log，不过，Fragment的生命周期可是有10个之多哦！！
+    </string>
 
     <string name="assignment_open_contract">
         我们这次学一下，如何获取android的联系人：\n

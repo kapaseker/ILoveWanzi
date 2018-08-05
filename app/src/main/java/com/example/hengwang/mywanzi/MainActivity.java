@@ -15,10 +15,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     private static final String[] TITLES = new String[]{
-            "居中文字", "测试比重", "改变背景", "发起提示", "展示网格列表", "使用ViewPager", "Activity传值", "展示ListView", "打开联系人", "本地存储", "生命周期", "使用数据库"
+            "使用Fragment",
+            "居中文字", "测试比重", "改变背景", "发起提示",
+            "展示网格列表", "使用ViewPager", "Activity传值",
+            "展示ListView", "打开联系人", "本地存储", "生命周期", "使用数据库"
     };
 
     private static final int[] DESCS = new int[]{
+            R.string.assignment_fragment,
             R.string.app_name, R.string.app_name, R.string.assignment_bkg, R.string.assignment_tip, R.string.assignment_grid,
             R.string.assignment_viewpager,
             R.string.assignment_transfer,
@@ -30,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
     private static final Class[] ACTIVITIES = new Class[]{
+            FragmentArrangeActivity.class,
             SecondActivity.class, TestLayoutActivity.class, ChangeBackgroundActivity.class, TipActivity.class, GridViewActivity.class,
             ViewPagerAssignmentActivity.class, TransferAssignmentActivity.class, ListViewActivity.class, OpenContractAssignmentActivity.class,
             LocalSaveActivity.class, LogAndLifeAssignmentActivity.class, SqlAssignmentActivity.class
