@@ -11,6 +11,23 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.hengwang.mywanzi.activitylife.LogAndLifeAssignmentActivity;
+import com.example.hengwang.mywanzi.base.ArrangeAssignmentActivity;
+import com.example.hengwang.mywanzi.base.AssignmentActivity;
+import com.example.hengwang.mywanzi.fragment.FragmentArrangeActivity;
+import com.example.hengwang.mywanzi.layout.ChangeBackgroundActivity;
+import com.example.hengwang.mywanzi.layout.GridViewActivity;
+import com.example.hengwang.mywanzi.layout.ListViewActivity;
+import com.example.hengwang.mywanzi.layout.SecondActivity;
+import com.example.hengwang.mywanzi.layout.TestLayoutActivity;
+import com.example.hengwang.mywanzi.layout.ViewPagerAssignmentActivity;
+import com.example.hengwang.mywanzi.sharepref.LocalSaveActivity;
+import com.example.hengwang.mywanzi.sql.SqlAssignmentActivity;
+import com.example.hengwang.mywanzi.tip.TipActivity;
+import com.example.hengwang.mywanzi.transferresult.OpenContractAssignmentActivity;
+import com.example.hengwang.mywanzi.transferresult.TransferAssignmentActivity;
+import com.example.hengwang.mywanzi.wish.WishActivity;
+
 public class MainActivity extends AppCompatActivity {
 
 

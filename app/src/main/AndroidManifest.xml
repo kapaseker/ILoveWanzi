@@ -21,49 +21,49 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity">
+        <activity android:name=".layout.SecondActivity">
         </activity>
-        <activity android:name=".TestLayoutActivity">
+        <activity android:name=".layout.TestLayoutActivity">
         </activity>
-        <activity android:name=".ChangeBackgroundActivity">
+        <activity android:name=".layout.ChangeBackgroundActivity">
         </activity>
-        <activity android:name=".WishActivity">
+        <activity android:name=".wish.WishActivity">
         </activity>
-        <activity android:name=".TipActivity">
+        <activity android:name=".tip.TipActivity">
         </activity>
-        <activity android:name=".GridViewActivity"/>
-        <activity android:name=".WhatDrawActivity">
+        <activity android:name=".layout.GridViewActivity"/>
+        <activity android:name=".wish.WhatDrawActivity">
         </activity>
-        <activity android:name=".ILoveActivity"/>
-        <activity android:name=".ViewPagerAssignmentActivity">
+        <activity android:name=".wish.ILoveActivity"/>
+        <activity android:name=".layout.ViewPagerAssignmentActivity">
         </activity>
-        <activity android:name=".TransferAssignmentActivity">
+        <activity android:name=".transferresult.TransferAssignmentActivity">
         </activity>
-        <activity android:name=".ListViewActivity">
+        <activity android:name=".layout.ListViewActivity">
         </activity>
-        <activity android:name=".ViewPagerActivity">
+        <activity android:name=".layout.ViewPagerActivity">
         </activity>
-        <activity android:name=".QuestionActivity">
+        <activity android:name=".transferresult.QuestionActivity">
         </activity>
-        <activity android:name=".AnswerActivity">
+        <activity android:name=".transferresult.AnswerActivity">
         </activity>
-        <activity android:name=".OpenContractAssignmentActivity">
+        <activity android:name=".transferresult.OpenContractAssignmentActivity">
         </activity>
-        <activity android:name=".contactActivity">
+        <activity android:name=".transferresult.ContactActivity">
         </activity>
-        <activity android:name=".LocalSaveActivity">
+        <activity android:name=".sharepref.LocalSaveActivity">
         </activity>
-        <activity android:name=".SharedPreferencesActivity">
+        <activity android:name=".sharepref.SharedPreferencesActivity">
         </activity>
-        <activity android:name=".SqlAssignmentActivity"/>
-        <activity android:name=".LogAndLifeAssignmentActivity"/>
-        <activity android:name=".ActivityLife1Activity">
+        <activity android:name=".sql.SqlAssignmentActivity"/>
+        <activity android:name=".activitylife.LogAndLifeAssignmentActivity"/>
+        <activity android:name=".activitylife.ActivityLife1Activity">
         </activity>
-        <activity android:name=".ActivityLife2Activity">
+        <activity android:name=".activitylife.ActivityLife2Activity">
         </activity>
-        <activity android:name=".SqlActivity">
+        <activity android:name=".sql.SqlActivity">
         </activity>
-        <activity android:name=".FragmentArrangeActivity"/>
+        <activity android:name=".fragment.FragmentArrangeActivity"/>
     </application>
 
 </manifest>

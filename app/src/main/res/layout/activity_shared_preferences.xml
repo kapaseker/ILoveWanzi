@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center_vertical"
     android:orientation="vertical"
-    tools:context=".SharedPreferencesActivity">
+    tools:context=".sharepref.SharedPreferencesActivity">
 <EditText
     android:id="@+id/mInfo"
     android:layout_width="match_parent"

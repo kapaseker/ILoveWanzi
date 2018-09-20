@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center_vertical"
     android:orientation="vertical"
-    tools:context=".contactActivity">
+    tools:context=".transferresult.ContactActivity">
     <TextView
         android:id="@+id/contactTxt"
         android:layout_width="wrap_content"

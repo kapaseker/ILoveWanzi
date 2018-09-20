@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="@dimen/margin_default"
-    tools:context=".WhatDrawActivity">
+    tools:context=".wish.WhatDrawActivity">
 
     <com.example.hengwang.mywanzi.view.DotDrawView
         android:id="@+id/view_whatdraw"
